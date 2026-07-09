@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Responsive Happy Birthday!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(circle, #ff9a9e 0%, #fad0c4 99%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            perspective: 1200px; /* 3D အနက်ရှိုင်းကို ပိုပေါ်လွင်စေတယ် */
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        /* 3D Card Container */
+        .card-container {
+            width: 100%;
+            max-width: 340px; /* ဖုန်းစခရင်အမျိုးအစားအားလုံးနဲ့ တော်အောင် */
+            height: 480px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        /*
