@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Happy Birthday!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(circle, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            font-family: 'Poppins', sans-serif;
+            perspective: 1000px; /* Essential for 3D effect */
+        }
+
+        .container {
+            width: 350px;
+            height: 450px;
+            background-color: transparent;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .container:hover {
+            transform: rotateY(180deg);
+        }
+
+        .front, .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .front {
+            background: linear-gradient(135deg, #a1887f 0%, #f1a7f1 100%);
+            color: #fff;
+        }
+
+        .back {
+            background-color: #fff;
+            color: #333;
+            transform: rotateY(180deg);
+        }
+
+        .cake {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: float 2s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .name {
+            font-weight: bold;
+            color: #ff6b81;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="front">
+            <div class="cake">🎂</div>
+            <h1>Happy Birthday!</h1>
+            <p>ဒီနေ့ကစပြီး နောင်နှစ်ပေါင်းများစွာတိုင် ပျော်ရွှင်ချမ်းမြေ့ပါစေကြောင်း ဆုတောင်းပေးလိုက်ပါတယ်။</p>
+        </div>
+        <div class="back">
+            <h2>ချစ်လှစွာသော <span class="name">[နာမည်]</span> သို့</h2>
+            <p>လိုအင်ဆန္ဒတွေအကုန် ပြည့်ဝပါစေ။ ✨🎉</p>
+            <p>ချစ်ခြင်းများစွာဖြင့်၊</p>
+            <p>[သင့်နာမည်]</p>
+        </div>
+    </div>
+
+</body>
+</html>
